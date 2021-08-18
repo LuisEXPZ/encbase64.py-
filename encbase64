@@ -1,0 +1,18 @@
+import base64
+import sys
+
+
+print "Coloque os caracters entre aspas"
+print "exemplo: python encbase64.py 'quaquer coisa' "
+print ""
+
+resp = raw_input("Encode ou Decode? ")
+print ""
+if resp == str("Encode"):
+     b = base64.b64encode(sys.argv[1])
+     print b
+elif resp == str("Decode"):
+     b = base64.b64decode(sys.argv[1])
+     print b
+else:
+     print "caracter invalido"
